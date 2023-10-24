@@ -1,12 +1,17 @@
+import Card from "./components/card";
+
 function App() {
+  // Aviso: Mas tarde haremos un enrrutador
   return (
-    <div>
-      <h1 className="bg-gradient-to-r from-indigo-400 to-pink-400 bg-clip-text text-8xl font-extrabold text-transparent">
-        We love tailwind 💙
-      </h1>
-      <p className="p-4 pl-2">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-      </p>
+    <div className="">
+      <main className="bg-[#180a04] h-screen grid grid-cols-3 gap-4">
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+      </main>
     </div>
   );
 }
