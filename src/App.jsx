@@ -1,7 +1,6 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Card from "./components/card";
 import axios from "axios";
-import { useState } from "react";
 import LetterSelector from "./components/LetterSelector";
 
 function App() {
@@ -21,17 +20,17 @@ function App() {
       .catch((error) => {
         console.error("Error al obtener los datos:", error);
       });
-  }
+  };
 
   useEffect(()=>{
     //Get themealdb
-    getMeals("b");
+    getMeals();
   },[]);
 
   return (
     <div>
       <LetterSelector onSelect={(letter) => getMeals(letter)} />
-      <main className="bg-[#180a04] h-screen grid grid-cols-1 md:grid-cols-2 lg:gird-cols-3 gap-4">
+      <main className="grid grid-cols-2 md:grid-cols-3 lg:gird-cols-4 gap-4">
         {meals.map((meal)=>(
         <Card
           key={meal.idMeal}
